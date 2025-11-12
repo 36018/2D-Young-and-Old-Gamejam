@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
+
+    [SerializeField] GameObject GameOverScreen;
 
     private void Update()
     {
@@ -19,7 +22,9 @@ public class Timer : MonoBehaviour
         {
             remainingTime = 0;
             timerText.color = Color.red;
-            Application.Quit();
+
+            GameOverScreen.SetActive(true);
+            Time.timeScale = 0;
 
         }
 
