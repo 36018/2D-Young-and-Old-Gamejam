@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class OldmanProjectile : MonoBehaviour
 {
-    private float velocity = 30f;
+    public float velocity = 30f;
+    private float timePassed = 0f;
     void Start()
     {
         
@@ -14,5 +15,12 @@ public class OldmanProjectile : MonoBehaviour
     void Update()
     {
         transform.position += transform.right*Time.deltaTime*velocity;
+
+        timePassed += Time.deltaTime;
+
+        if (timePassed > 3f)
+        { 
+            Destroy(gameObject);
+        }
     }
 }
