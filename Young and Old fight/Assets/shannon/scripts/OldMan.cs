@@ -38,7 +38,7 @@ public class OldMan : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             GameObject bullet = Instantiate(Projectileprefab);
             bullet.transform.position = transform.position;
