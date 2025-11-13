@@ -17,7 +17,7 @@ public class AttacksP1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (!movement.inAir)
+            if (!movement)//.inAir)
             {
 
             }

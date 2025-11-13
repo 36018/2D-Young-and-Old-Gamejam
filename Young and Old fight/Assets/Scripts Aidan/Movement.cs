@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Movement : MonoBehaviour
+public class Movement2 : MonoBehaviour
 {
     private float speed = 5f; //temporary
     private Rigidbody2D rb;
